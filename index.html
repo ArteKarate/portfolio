@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<link rel="stylesheet"
+      href="http://fonts.googleapis.com/css?family=Nunito">
+<style>
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    @media screen and (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto;
+        }
+    }
+
+
+    body {
+        background-color: #202020;
+        color: floralwhite;
+        overflow-x: hidden;
+    }
+
+    .headline {
+        font-family: 'Nunito', serif;
+        text-align: left;
+        font-weight: bold;
+        font-size: 60px;
+        padding-top: 80px;
+        padding-bottom: -100px;
+    }
+
+    .all {
+        font-family: 'Nunito', serif;
+        text-align: left;
+        margin: 0 auto;
+        font-weight: normal;
+        font-size: 22px;
+        width: 1250px;
+    }
+
+    .sub_headline {
+        text-align: center;
+        font-weight: bold;
+        font-size: 25px;
+        padding-right: 10px;
+        display: inline;
+    }
+
+    .description_text {
+        text-align: left;
+        font-weight: normal;
+        font-size: 22px;
+        padding-top: 5px;
+        font-style: italic;
+    }
+
+    .text {
+        font-family: 'Nunito', serif;
+        text-align: left;
+        font-size: 28px;
+    }
+
+    .icons {
+        filter: invert(100%) sepia(28%) saturate(2%) hue-rotate(327deg) brightness(103%) contrast(101%);
+        width: 25px;
+        padding-right: 5px;
+        vertical-align: -3px;
+    }
+
+    ul {
+        list-style-type: disc;
+        margin: 5px;
+    }
+
+    /* Side bar ----------------------------------------------------------------------------------------------------
+
+
+    /* Slideshow---------------------------------------------------------------------------------------- */
+
+    .Slider {
+        position: relative;
+        display: flex;
+        width: 600px;
+        height: 375px;
+        overflow: hidden;
+    }
+
+    .Slider img {
+        max-height: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+        transition: all 0.75s;
+    }
+
+    .Arrows {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .Arrows i {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    .Arrows i:last-of-type {
+        left: 100%;
+        transform: translate(-100%, -50%);
+    }
+
+    .Arrows i:hover {
+        color: orange;
+    }
+
+    a:link {
+        text-decoration: none;
+    }
+
+    a:visited {
+        text-decoration: none;
+        color: ghostwhite;
+    }
+
+    a:hover {
+        font-weight: bold;
+        color: ghostwhite;
+    }
+
+    a:active {
+        text-decoration: underline;
+    }
+
+
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+    }
+
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 250px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -60px;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
+
+    /* Slideshow---------------------------------------------------------------------------------------- */
+
+
+    /* The side navigation menu */
+    .sidenav {
+        font-family: 'Nunito', serif;
+        text-align: center;
+        height: 100%; /* 100% Full-height */
+        width: 0; /* 0 width - change this with JavaScript */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Stay on top */
+        top: 0; /* Stay at the top */
+        left: 0;
+        background-color: #111; /* Black*/
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 60px; /* Place content 60px from the top */
+        transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    }
+
+    /* The navigation menu links */
+    .sidenav a {
+        padding: 42px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 28px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    /* When you mouse over the navigation links, change their color */
+    .sidenav a:hover {
+        color: darkorange;
+    }
+
+
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn {
+        position: absolute;
+        top: -30px;
+        right: 25px;
+        font-size: 40px;
+        margin-left: 50px;
+    }
+
+
+    /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+    #main {
+        transition: margin-left .5s;
+        padding: 20px;
+    }
+
+
+    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+    @media screen and (max-height: 450px) {
+        .sidenav {
+            padding-top: 15px;
+        }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+    }
+
+    /* Side bar ----------------------------------------------------------------------------------------------------*/
+
+    /* Youtube Video ----------------------------------------------------------------------------------------------------*/
+
+    .video-container-wrapper {
+        max-width: 100%;
+        width: 600px;
+        margin: auto;
+    }
+
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 0;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .video-container iframe,
+    .video-container object,
+    .video-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .wrapper {
+        width: 1200px;
+        height: auto;
+        display: flex;
+    }
+
+    .left {
+        text-align: left;
+    }
+
+    .right {
+        text-align: left;
+    }
+
+    .skills {
+        padding-bottom: 150px;
+    }
+
+    .description_text {
+        font-style: italic;
+    }
+
+    .row {
+        display: flex;
+    }
+
+    .column {
+        flex: 33.33%;
+        padding: 5px;
+    }
+
+    @media only screen and (max-width: 1200px) {
+
+        .description_text {
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+
+        .all {
+            width: auto;
+        }
+
+        .wrapper {
+            flex-direction: column;
+            width: auto;
+            height: auto;
+        }
+
+        .left {
+            width: auto;
+            margin-bottom: -575px
+        }
+
+        .skills {
+            margin: 350px 10px 0 0;
+            padding-left: 0;
+            padding-right: 20px;
+            overflow-wrap: break-word;
+        }
+
+        .right {
+            width: auto;
+            padding-top: 10px;
+            margin: 575px 0 -350px 0;
+            position: center;
+        }
+
+        .responsive {
+            width: auto;
+            padding-top: 10px;
+            margin: 500px 0 0;
+            position: center;
+        }
+
+    }
+
+
+    /* Youtube Video ----------------------------------------------------------------------------------------------------*/
+
+</style>
+
+
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>Artjom Zakoyan's Portfolio</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times</a>
+    <a href="#game_anchor">Games</a>
+    <a href="#app_anchor">Apps</a>
+    <a href="#experience_anchor">Experience</a>
+    <a href="#skill_anchor">Skills</a>
+    <a href="#education_anchor">Education</a>
+    <a href="#about_anchor">About</a>
+    <a href="#contact_anchor">Contact</a>
+</div>
+
+<span style="font-size:60px;cursor:pointer;padding: 40px 0 0 40px;" onclick="openNav()">&#9776; </span>
+
+<div style="text-align: center" class="headline">Hey, my name is Artjom Zakoyan</div>
+<div class="all" id="game_anchor">
+    <div class="headline">Games</div>
+    <div class="sub_headline">Cyberfast</div>
+    <div class="wrapper">
+        <div class="left">
+            <div class="video-container-wrapper">
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/YWkAXRyHs54"
+                            frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                </div>
+            </div>
+        </div>
+        <div style="padding-left: 10px" class="right">
+            <img src="Icons/information (2).svg" class="icons"/>
+            <p style="display:inline;" class="text">Introduction to Game Engineering (1st Semester)</p>
+            <br>
+            <img src="Icons/user-profile.svg" class="icons"/>
+            <p style="display:inline;" class="text">3</p>
+            <br>
+            <img src="Icons/menu.svg" class="icons"/>
+            <p style="display:inline;" class="text">Third Person Plattformer</p>
+            <br>
+            <img src="Icons/settings.svg" class="icons"/>
+            <p style="display:inline;" class="text">Unity</p>
+            <br>
+            <img src="Icons/pc-smartphone.svg" class="icons"/>
+            <p style="display:inline;" class="text">PC</p>
+            <br>
+            <img src="Icons/trophy.svg" class="icons"/>
+            <p style="display:inline;" class="text">DemoDay</p>
+            <div class="tooltip">
+                <img src="Icons/information%20(2).svg" class="icons" style="width: 15px; vertical-align: top"/>
+                <span class="tooltiptext">"The Demo Day of the Faculty of Informatics aims to provide a platform for exceptional student projects to be presented to a broader audience."
+</span>
+            </div>
+            <br>
+            <article class="description_text">
+                A fast paced third person plattformer with elements like wallrunning/walljumping, teleporters
+                and
+                dimension
+                switching. Can you beat the highscore?
+            </article>
+        </div>
+    </div>
+    <div class="skills">
+        <p class="sub_headline"> Role(s) and responsibilities</p>
+        <br>
+        <p style="text-decoration: underline" class="sub_headline"> Level Design</p>
+        <br>
+        <ul class="first">
+            <li>Designed and build all the levels</li>
+        </ul>
+        <p style="text-decoration: underline" class="sub_headline"> Game Design</p>
+        <br>
+        <ul class="first">
+            <li> Playtested and adjusted the levels</li>
+        </ul>
+        <p style="text-decoration: underline" class="sub_headline"> Programming</p>
+        <br>
+        <ul class="first">
+            <li>Programmed features like teleporter, booster or levitating platforms</li>
+        </ul>
+        <p style="text-decoration: underline" class="sub_headline"> Art</p>
+        <br>
+        <ul class="first">
+            <li>Particle Effects</li>
+        </ul>
+    </div>
+
+
+    <!---------------------------------------------------- PropAmBerg ----------------------------------------------------->
+
+
+    <div class="sub_headline">PropAmBerg</div>
+    <div class="wrapper">
+        <div class="left">
+            <div class="Slider">
+                <img src="Picture/Prop-am-Berg-2021-01-22-17-39-24_Moment.jpg"/>
+                <img src="Picture/Prop-am-Berg-2021-01-22-17-39-24_Moment2.jpg"/>
+                <img src="Picture/Prop-am-Berg-2021-01-22-17-40-57_Moment2.jpg"/>
+                <img src="Picture/Prop-am-Berg-2021-01-22-17-40-57_Moment3.jpg"/>
+                <img src="Picture/Prop-am-Berg-2021-01-22-17-40-57_Moment4.jpg"/>
+                <div class="Arrows">
+                    <i class="Prev fa fa-chevron-left fa-2x" aria-hidden="true"></i>
+                    <i class="Next fa fa-chevron-right fa-2x" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+        <div style="padding-left: 10px" class="right">
+            <img src="Icons/information (2).svg" class="icons"/>
+            <p style="display:inline;" class="text">GameJam (48h - "Freeze")</p>
+            <br>
+            <img src="Icons/user-profile.svg" class="icons"/>
+            <p style="display:inline;" class="text">6</p>
+            <br>
+            <img src="Icons/menu.svg" class="icons"/>
+            <p style="display:inline;" class="text">Asymmetric Stealth Local Multiplayer</p>
+            <br>
+            <img src="Icons/settings.svg" class="icons"/>
+            <p style="display:inline;" class="text">Unity</p>
+            <br>
+            <img src="Icons/pc-smartphone.svg" class="icons"/>
+            <p style="display:inline;" class="text">PC</p>
+            <br>
+            <article class="description_text">
+                One player controls a drone and up to four players play as gnomes. The gnomes can transform into
+                and select from a variety of objects, which are distributed across the level as well. The drone, which
+                can
+                only shoot once before having to recharge, is tasked with uncovering what is persistent and what is
+                not...
+            </article>
+        </div>
+    </div>
+    <div class="skills">
+        <p class="sub_headline"> Role(s) and responsibilities</p>
+        <br>
+        <p style="text-decoration: underline" class="sub_headline"> Level Design</p>
+        <br>
+        <ul class="first">
+            <li>Designed and build the level</li>
+            <li>Enviromental story telling</li>
+        </ul>
+        <p style="text-decoration: underline" class="sub_headline"> Game Design</p>
+        <br>
+        <ul class="first">
+            <li> Playtesting</li>
+        </ul>
+        <p style="text-decoration: underline" class="sub_headline"> Art</p>
+        <br>
+        <ul class="first">
+            <li>Particle Effects</li>
+        </ul>
+    </div>
+
+    <!---------------------------------------------------- SailAway ----------------------------------------------------->
+    <div class="sub_headline">SailAway</div>
+    <div class="wrapper">
+        <div class="left">
+            <div class="video-container-wrapper">
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/1Eg6QoPc9Gc"
+                            frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                </div>
+            </div>
+        </div>
+        <div style="padding-left: 10px" class="right">
+            <img src="Icons/information (2).svg" class="icons"/>
+            <p style="display:inline;" class="text">Interactionsdevices (3rd Semester)</p>
+            <br>
+            <img src="Icons/user-profile.svg" class="icons"/>
+            <p style="display:inline;" class="text">3</p>
+            <br>
+            <img src="Icons/menu.svg" class="icons"/>
+            <p style="display:inline;" class="text">Sailing Simulator</p>
+            <br>
+            <img src="Icons/settings.svg" class="icons"/>
+            <p style="display:inline;" class="text">Unity</p>
+            <br>
+            <img src="Icons/pc-smartphone.svg" class="icons"/>
+            <p style="display:inline;" class="text">Browser Game</p>
+            <br>
+            <img src="Icons/console.svg" class="icons"/>
+            <p style="display:inline;font-style: italic;" class="text"><a
+                    href="https://flixabua.itch.io/sailaway" target="_blank">
+                Click here to play!</a></p>
+            <article class="description_text">
+                Atmospheric sailing simulator where you have to collect all the treasures and avoid hitting obstacles.
+                With interactive wind you can adjust the speed.
+            </article>
+        </div>
+    </div>
+    <div class="skills">
+        <p class="sub_headline"> Role(s) and responsibilities</p>
+        <br>
+        <p style="text-decoration: underline" class="sub_headline"> Level Design</p>
+        <br>
+        <ul class="first">
+            <li>Designed and build the level</li>
+            <li>Enviromental story telling</li>
+        </ul>
+        <p style="text-decoration: underline" class="sub_headline"> Game Design</p>
+        <br>
+        <ul class="first">
+            <li>Playtesting and balacing</li>
+        </ul>
+        <p style="text-decoration: underline" class="sub_headline">Programming</p>
+        <br>
+        <ul class="first">
+            <li> Coded scripts for Collectibles, Obstacles etc.</li>
+        </ul>
+        <p style="text-decoration: underline" class="sub_headline"> Art</p>
+        <br>
+        <ul class="first">
+            <li>Particle Effects</li>
+        </ul>
+    </div>
+</div>
+
+<!---------------------------------------------------- Apps ----------------------------------------------------->
+
+<!---------------------------------------------------- Drinkr ----------------------------------------------------->
+
+
+<div class="all" id="app_anchor">
+    <div class="headline">Apps</div>
+    <div class="sub_headline">Drinkr - The drinking game</div>
+    <div class="wrapper">
+        <div class="left">
+            <img src="Picture/drinkr.webp" width="250px" height="auto">
+        </div>
+        <div style="padding-left: 10px" class="right">
+            <img src="Icons/information (2).svg" class="icons"/>
+            <p style="display:inline;" class="text">private project</p>
+            <br>
+            <img src="Icons/user-profile.svg" class="icons"/>
+            <p style="display:inline;" class="text">2</p>
+            <br>
+            <img src="Icons/coding.svg" class="icons"/>
+            <p style="display:inline;" class="text">Flutter/Dart</p>
+            <br>
+            <img src="Icons/playstore.svg" class="icons"/>
+            <p style="display:inline;font-style: italic;" class="text"><a
+                    href="https://play.google.com/store/apps/details?id=com.drinkr.android" target="_blank">
+                check in playstore</a></p>
+            <p class="description_text">
+                Drinking game which contains all the famous games like: guess the song, would you rather, quiz and many
+                more!
+            </p>
+        </div>
+    </div>
+    <div class="skills">
+        <p class="sub_headline"> Role(s) and responsibilities</p>
+        <br>
+        <p style="text-decoration: underline" class="sub_headline">UI</p>
+        <br>
+        <ul class="first">
+            <li>Designed the UI</li>
+        </ul>
+        <p style="text-decoration: underline" class="sub_headline">Frontend</p>
+        <br>
+        <ul class="first">
+            <li>Coded parts of the frontend</li>
+        </ul>
+        <p style="text-decoration: underline" class="sub_headline"> Art</p>
+        <br>
+        <ul class="first">
+            <li>Designed the app icon</li>
+        </ul>
+    </div>
+
+    <!---------------------------------------------------- Release App ----------------------------------------------------->
+
+    <div class="sub_headline">Release App (Working title)</div>
+    <div class="wrapper">
+        <div class="left">
+            <img src="Picture/Question.jpg" style="border-radius:  30px">
+
+        </div>
+        <div style="padding-left: 10px" class="right">
+            <img src="Icons/information (2).svg" class="icons"/>
+            <p style="display:inline;" class="text">private project</p>
+            <br>
+            <img src="Icons/user-profile.svg" class="icons"/>
+            <p style="display:inline;" class="text">2</p>
+            <br>
+            <img src="Icons/coding.svg" class="icons"/>
+            <p style="display:inline;" class="text">Flutter/Dart</p>
+            <br>
+            <img src="Icons/playstore.svg" class="icons"/>
+            <p style="display:inline; font-style: italic;" class="text">coming soon</p>
+            <p class="description_text">
+                Track music releases and get notified when your favorite album drops!
+            </p>
+        </div>
+    </div>
+    <div class="skills">
+        <p class="sub_headline"> Role(s) and responsibilities</p>
+        <br>
+        <p style="text-decoration: underline" class="sub_headline">UI</p>
+        <br>
+        <ul class="first">
+            <li>Designed the UI</li>
+        </ul>
+        <p style="text-decoration: underline" class="sub_headline">Frontend</p>
+        <br>
+        <ul class="first">
+            <li>Coded parts of the frontend</li>
+        </ul>
+    </div>
+</div>
+
+
+<!---------------------------------------------------- Experience ----------------------------------------------------->
+
+<!---------------------------------------------------- Everesto ----------------------------------------------------->
+
+<div class="all" id="experience_anchor">
+    <div class="headline">Experience</div>
+    <div class="sub_headline">Everesto GmbH</div>
+    <div class="wrapper">
+        <div class="left">
+            <img src="Picture/everesto.jpg" width="200px" height="auto">
+        </div>
+        <div style="padding-left: 10px" class="right">
+            <img src="Icons/information (2).svg" class="icons"/>
+            <p style="display:inline;" class="text">Flutter Development (Working Student)</p>
+            <br>
+            <img src="Icons/calendar.svg" class="icons"/>
+            <p style="display:inline;" class="text">2020 November - 2020 December</p>
+            <br>
+            <img src="Icons/user-profile.svg" class="icons"/>
+            <p style="display:inline;" class="text">6</p>
+            <br>
+            <img src="Icons/menu.svg" class="icons"/>
+            <p style="display:inline;" class="text">Software Development</p>
+            <br>
+            <img src="Icons/coding.svg" class="icons"/>
+            <p style="display:inline;" class="text">Flutter/Dart</p>
+            <br>
+        </div>
+    </div>
+    <div class="skills">
+        <p class="sub_headline"> Role(s) and responsibilities</p>
+        <br>
+        <p style="text-decoration: underline" class="sub_headline">UI</p>
+        <br>
+        <ul class="first">
+            <li>Renewed the UI</li>
+        </ul>
+        <p style="text-decoration: underline" class="sub_headline">Frontend</p>
+        <br>
+        <ul class="first">
+            <li>Rebuild the existing app in Flutter</li>
+            <li>Implemented new Features</li>
+            <li>Bugfixing</li>
+        </ul>
+    </div>
+
+</div>
+
+
+<!---------------------------------------------------- Skills ----------------------------------------------------->
+
+<div class="all" id="skill_anchor">
+    <div class="headline">Skills</div>
+    <div class="skills">
+        <p class="sub_headline"> Programming</p>
+        <br>
+        <ul class="first">
+            <li>Java</li>
+            <li>Flutter/Dart</li>
+            <li>C#</li>
+            <li>HTML/CSS</li>
+            <li>SQL</li>
+            <li>GIT</li>
+        </ul>
+
+        <p class="sub_headline"> Game Development</p>
+        <br>
+        <ul class="first">
+            <li>Unity 3D</li>
+            <li>Unreal Engine 4</li>
+        </ul>
+
+        <p class="sub_headline">UI</p>
+        <br>
+        <ul class="first">
+            <li>AdobeXD</li>
+            <li>Figma</li>
+        </ul>
+    </div>
+    <p class="sub_headline">Other Software</p>
+    <br>
+    <ul class="first">
+        <li>Adobe Photoshop</li>
+        <li>Microsoft Office</li>
+        <li>Blender</li>
+    </ul>
+
+    <p class="sub_headline">Languages</p>
+    <br>
+    <ul class="first">
+        <li>German</li>
+        <li>English</li>
+        <li>Russian</li>
+    </ul>
+</div>
+
+<!---------------------------------------------------- Education ----------------------------------------------------->
+<div class="all" id="education_anchor">
+    <div class="headline">Education</div>
+    <div class="sub_headline">Technical University Munich</div>
+    <div class="wrapper">
+        <div class="left">
+            <img src="Picture/TUM_Logo.jpg">
+        </div>
+        <div style="padding-left: 10px" class="right">
+            <img src="Icons/information%20(2).svg" class="icons"/>
+            <p style="display:inline;" class="text">Informatics: Game Engineering</p>
+            <br>
+            <img src="Icons/graduation-hat.svg" class="icons"/>
+            <p style="display:inline;" class="text">Bachelor of Science (B.Sc)</p>
+            <br>
+            <img src="Icons/calendar.svg" class="icons"/>
+            <p style="display:inline;" class="text">2019 October - now</p>
+            <br>
+            <img src="Icons/location.svg" class="icons"/>
+            <p style="display:inline;" class="text">Munich, Germany</p>
+            <br>
+        </div>
+    </div>
+</div>
+
+<!---------------------------------------------------- AboutME ----------------------------------------------------->
+<div class="all" id="about_anchor">
+    <div class="headline responsive">About me</div>
+    <article>
+        My name is Artjom Zakoyan, I am 20 years old and currently studying Informatik: Game Engineering (B.Sc.) in
+        Munich.
+        Since my childhood I was interested in game development, especially in Game Design and wanted to pursue this as
+        my career.
+        Aside from Game Development I also love to programm and design Apps.
+        My name is Artjom Zakoyan, I am 20 years old and currently studying Informatik: Game Engineering (B.Sc.) in
+        Munich.
+        Since my childhood I was interested in game development, especially in Game Design and wanted to pursue this as
+        my career.
+        Aside from Game Development I also love to programm and design Apps.
+        My name is Artjom Zakoyan, I am 20 years old and currently studying Informatik: Game Engineering (B.Sc.) in
+        Munich.
+        Since my childhood I was interested in game development, especially in Game Design and wanted to pursue this as
+        my career.
+        Aside from Game Development I also love to programm and design Apps.
+        My name is Artjom Zakoyan, I am 20 years old and currently studying Informatik: Game Engineering (B.Sc.) in
+        Munich.
+        Since my childhood I was interested in game development, especially in Game Design and wanted to pursue this as
+        my career.
+        Aside from Game Development I also love to programm and design Apps.
+    </article>
+    <link>
+</div>
+
+<!---------------------------------------------------- Contact ----------------------------------------------------->
+<div class="all" id="contact_anchor">
+    <div class="headline">Contact</div>
+    <article>
+        You can contact me via E-Mail.
+    </article>
+</div>
+
+<div style="text-align: center;">
+    <a href="mailto:zakoyan.artjom@gmail.com" target="_blank" rel="noopener noreferrer">
+        <img src="Icons/email.svg" class="icons"
+             style="width: 50px;height: auto">
+    </a>
+</div>
+<!--
+<div style="text-align: center;">
+    <a href="#" onclick="CopyToClipboard('sample');return false;" class="text">Click to copy my E-Mail</a>
+</div>
+<p id="sample" style="color: #202020; position: absolute;top: 0;left: -5000px; text-align: center">
+    zakoyan.artjom@gmail.com</p>
+-->
+
+
+<a href="impressum.com" target="_blank">
+    <p style="text-align: right; padding-right: 15px; font-size: 15px" class="text">Impressum</p>
+</a>
+<div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
+        href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+<div>Icons made by <a href="https://www.flaticon.com/authors/kiranshastry" title="Kiranshastry">Kiranshastry</a>
+    from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+<div>Icons made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> from <a
+        href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+<!--
+-->
+</body>
+
+
+</html>
+
+<script>
+
+    const next = document.querySelector('.Next')
+    const prev = document.querySelector('.Prev')
+    const slider = document.querySelector('.Slider')
+
+    let images = slider.querySelectorAll('img')
+    let currentImageIndex = 0
+    let maxImageIndex = images.length - 1
+
+    next.addEventListener('click', e => {
+        updateCurrentImageIndex(1)
+        slideImage()
+    })
+
+    prev.addEventListener('click', e => {
+        updateCurrentImageIndex(-1)
+        slideImage()
+    })
+
+    function updateCurrentImageIndex(value) {
+        currentImageIndex += value
+        if (currentImageIndex < 0) currentImageIndex = maxImageIndex
+        else if (currentImageIndex > maxImageIndex) currentImageIndex = 0
+    }
+
+    function slideImage() {
+        images.forEach(image => {
+            image.style.transform = `translateX(${-100 * currentImageIndex}%)`
+        })
+    }
+
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "200px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+
+    /* Get the text field */
+    function CopyToClipboard(id) {
+        var r = document.createRange();
+        r.selectNode(document.getElementById(id));
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(r);
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+    }
+
+</script>
