@@ -333,19 +333,6 @@ a:active {
         position: center;
     }
 
-    .left3 {
-        width: auto;
-        margin-bottom: -600px;
-    }
-
-
-    .right3 {
-        width: auto;
-        padding-top: 10px;
-        margin: 600px 0 0 0;
-        position: center;
-    }
-
 
     @media only screen and (max-width: 1050px) {
         .wrapper2 {
