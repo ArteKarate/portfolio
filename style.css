@@ -118,6 +118,7 @@ a:link {
     background-size: 2px 2px;
     text-decoration: none;
     transition: background-size .2s;
+    color: white;
 }
 
 a:hover {
