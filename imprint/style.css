@@ -8,8 +8,9 @@ html {
     }
 }
 
+
 body {
-    background-color: #202020;
+    background-color: #101010;
     color: white;
     overflow-x: hidden;
     font-family: 'Nunito', serif;
@@ -27,7 +28,9 @@ h3 span {
     font-size: 70px;
     line-height: 70px;
     /* color: white;*/
+    /*
     text-shadow: 0 15px 10px rgba(0, 0, 0, 0.5);
+    */
     letter-spacing: -2px;
 }
 
@@ -38,7 +41,9 @@ h3 span {
     font-size: 60px;
     padding-top: 80px;
     padding-bottom: -100px;
+    /*
     text-shadow: 0 15px 10px rgba(0, 0, 0, 0.5);
+    */
 
 }
 
@@ -53,33 +58,54 @@ h3 span {
 
 .sub_headline {
     text-align: center;
+    font-weight: 600;
+    font-size: 22px;
+    padding-right: 10px;
+    display: inline;
+    padding-top: 10px;
+
+}
+
+.names {
+    text-align: center;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 30px;
     padding-right: 10px;
     display: inline;
     padding-top: 25px;
-
 }
 
 .description_text {
     text-align: left;
     font-weight: normal;
-    font-size: 22px;
-    padding-top: 5px;
+    font-size: 20px;
+    padding-top: 15px;
     font-style: italic;
 }
 
 .text {
     font-family: 'Nunito', serif;
     text-align: left;
-    font-size: 28px;
+    font-size: 25px;
 }
 
 .icons {
     filter: invert(100%) sepia(28%) saturate(2%) hue-rotate(327deg) brightness(103%) contrast(101%);
-    width: 25px;
-    padding-right: 5px;
+    width: 23px;
+    padding-right: 8px;
     vertical-align: -3px;
+}
+
+.link_icons {
+    filter: invert(100%) sepia(28%) saturate(2%) hue-rotate(327deg) brightness(103%) contrast(101%);
+    width: 23px;
+    padding-right: 8px;
+    vertical-align: -3px;
+}
+
+.link_icons:hover {
+    transition: all 0.3s ease 0s;
+    opacity: .2;
 }
 
 ul {
@@ -151,7 +177,7 @@ a:visited {
 }
 
 
-.nav_link li .other_link  a {
+.nav_link li .other_link a {
     transition: all 0.3s ease 0s;
 }
 
@@ -161,7 +187,7 @@ a:hover {
     color: black;
 }
 
-.other_link a:hover  {
+.other_link a:hover {
     transition: all 0.3s ease 0s;
     color: grey;
 }
@@ -278,7 +304,6 @@ a:hover {
 /* Slideshow---------------------------------------------------------------------------------------- */
 
 
-
 /* Youtube Video ----------------------------------------------------------------------------------------------------*/
 
 .video-container-wrapper {
@@ -343,6 +368,7 @@ a:hover {
     flex: 33.33%;
     padding: 5px;
 }
+
 
 /* Responsive */
 
