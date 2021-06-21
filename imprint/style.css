@@ -108,10 +108,7 @@ h3 span {
     opacity: .2;
 }
 
-ul {
-    list-style-type: disc;
-    margin: 5px;
-}
+
 
 
 /*Topbar*/
@@ -381,6 +378,10 @@ a:hover {
 
     .all {
         width: auto;
+    }
+
+    ul{
+        padding-inline-start: 100px!important;
     }
 
     .wrapper {

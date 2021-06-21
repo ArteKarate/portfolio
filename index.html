@@ -21,19 +21,17 @@
 </head>
 
 <body>
-<div style="margin:-8px">
-    <header>
+<div style="margin-top: 8px">
+    <header class="top_bar_text">
         <div class="other_link">
-            <a style="padding-left: 30px; background: none" href="#">Artjom Zakoyan</a>
+            <a class="myName" style="padding-left: 30px; background: none" href="#">Artjom Zakoyan</a>
         </div>
         <nav>
             <ul class="nav_link">
                 <li><a href="#game_anchor">Games</a></li>
                 <li><a href="#app_anchor">Apps</a></li>
                 <li><a href="#experience_anchor">Experience</a></li>
-                <!--
-                                <li><a href="#certificate_anchor">Certificates</a></li>
-                -->
+                <li><a href="#certificate_anchor">Certificates</a></li>
                 <li><a href="#skill_anchor">Skills</a></li>
                 <li><a href="#about_anchor">About</a></li>
                 <li><a href="#contact_anchor">Contact</a></li>
@@ -43,6 +41,7 @@
             <a class="button_link button_link_wrapper" href="Picture/Artjom_Zakoyan_CV.pdf"
                target="_blank"><span>Resume</span></a>
         </div>
+
     </header>
 </div>
 
@@ -55,7 +54,7 @@
     <span>I'm Artjom</span>
     <span style="font-size: 50px; letter-spacing: -1px">Game Developer / UI/UX - Designer / Programmer</span>
     <br>
-    <span style="font-size: 30px; letter-spacing: -1px">Below you can find my portfolio highlighting some of my various work.</span>
+    <span class="names" style="letter-spacing: -1px">Below you can find my portfolio highlighting some of my various work.</span>
 
 </h3>
 
@@ -66,7 +65,7 @@
         <div class="wrapper">
             <div class="left">
                 <div class="video-container-wrapper">
-                    <img src="GIFs/pixelplatformer_demo.gif" width="600"/>
+                    <img class="gif" src="GIFs/pixelplatformer_demo.gif" width="600"/>
                 </div>
             </div>
             <div style="padding-left: 10px" class="right">
@@ -85,6 +84,7 @@
                 <img src="Icons/pc-smartphone.svg" class="icons"/>
                 <p style="display:inline;" class="text">PC</p>
                 <br>
+
                 <article class="description_text">
                     Small 2D combat demo I did with Unreal Engine 4. Designed, balanced and programmed everything by my
                     own.
@@ -116,18 +116,12 @@
                 </li>
             </ul>
         </div>
-
         <div class="names">Cyberfast</div>
         <div class="wrapper">
             <div class="left">
                 <div class="video-container-wrapper">
-                    <div class="left">
-                        <div class="video-container-wrapper">
-                            <img src="GIFs/output.gif" width="600"/>
-                        </div>
-                    </div>
+                    <img class="gif"  src="GIFs/output.gif" width="600"/>
                 </div>
-
             </div>
             <div style="padding-left: 10px" class="right">
                 <img src="Icons/information (2).svg" class="icons"/>
@@ -148,7 +142,7 @@
                 <img src="Icons/trophy.svg" class="icons"/>
                 <p style="display:inline;" class="text">DemoDay</p>
                 <div class="tooltip">
-                    <img src="Icons/information%20(2).svg" class="icons"
+                    <img src="Icons/information%20(2).svg" class="icon"
                          style="width: 15px; vertical-align: top"/>
                     <span class="tooltiptext">"The Demo Day of the Faculty of Informatic aims to provide a platform for exceptional
                     student projects to be presented to a broader audience."</span>
@@ -193,16 +187,8 @@
         <div class="names">PropAmBerg</div>
         <div class="wrapper">
             <div class="left">
-                <div class="Slider">
-                    <img src="Picture/Prop-am-Berg-2021-01-22-17-39-24_Moment.jpg" height="350"/>
-                    <img src="Picture/Prop-am-Berg-2021-01-22-17-39-24_Moment2.jpg" height="350"/>
-                    <img src="Picture/Prop-am-Berg-2021-01-22-17-40-57_Moment2.jpg" height="350"/>
-                    <img src="Picture/Prop-am-Berg-2021-01-22-17-40-57_Moment3.jpg" height="350"/>
-                    <img src="Picture/Prop-am-Berg-2021-01-22-17-40-57_Moment4.jpg" height="350"/>
-                    <div class="Arrows">
-                        <i class="Prev fa fa-chevron-left fa-2x" aria-hidden="true"></i>
-                        <i class="Next fa fa-chevron-right fa-2x" aria-hidden="true"></i>
-                    </div>
+                <div class="video-container-wrapper">
+                    <img class="gif"  src="GIFs/propamberg.gif   " width="600"/>
                 </div>
             </div>
             <div style="padding-left: 10px" class="right">
@@ -429,9 +415,9 @@
     <div class="names">Vemcon GmbH</div>
     <div class="wrapper">
         <div class="left">
-            <img src="Picture/Vemcon_Logo_Pos_Vorschaubild.jpg" width="300px" height="auto">
+            <img src="Picture/Vemcon_Logo_Pos_Vorschaubild.jpg" width="250px" height="auto">
         </div>
-        <div style="padding-left: 10px" class="right">
+        <div style="    padding-left: 10px" class="right">
             <img src="Icons/information (2).svg" class="icons"/>
             <p style="display:inline;" class="text">UX Designer (Working Student)</p>
             <br>
@@ -472,7 +458,7 @@
     <div class="names">Everesto GmbH</div>
     <div class="wrapper">
         <div class="left">
-            <img src="Picture/everesto.jpg" width="300px" height="auto">
+            <img src="Picture/everesto.jpg" width="250" height="auto">
         </div>
         <div style="padding-left: 10px" class="right">
             <img src="Icons/information (2).svg" class="icons"/>
@@ -513,10 +499,10 @@
 
 <!---------------------------------------------------- Google UX ----------------------------------------------------->
 
-<!--
+
 <div class="all" id="certificate_anchor">
     <div class="headline">Certificates</div>
-    <div class="names">Google UX Design</div>
+    <!--<div class="names">Google UX Design</div>
     <div class="wrapper">
         <div class="left">
             <img src="Picture/Google.png" width="300px" height="auto">
@@ -554,56 +540,52 @@
             <li>Responsive Web Design in Adobe XD</li>
             <li>Design a User Experience for Social Good & Prepare for Jobs</li>
         </ol>
-    </div>
--->
+    </div>-->
 
-<!---------------------------------------------------- Game Design ----------------------------------------------------->
+    <!---------------------------------------------------- Game Design ----------------------------------------------------->
 
-<!--<div class="names">Game Design: Art and Concepts</div>
-<div class="wrapper">
-    <div class="left">
-        <img src="Picture/game_design.jpg" width="300px" height="auto">
+    <div class="names">Game Design: Art and Concepts</div>
+    <div class="wrapper">
+        <div class="left">
+            <img src="Picture/game_design.jpg" width="300px" height="auto">
+        </div>
+        <div style="padding-left: 10px" class="right">
+            <img src="Icons/information (2).svg" class="icons"/>
+            <p style="display:inline;" class="text">California Institute of the Arts</p>
+            <br>
+            <img src="Icons/calendar.svg" class="icons"/>
+            <p style="display:inline;" class="text">6 months</p>
+            <br>
+            <img src="Icons/document.svg" class="icons"/>
+            <a href="Picture/Certificate_Game_Design.pdf" target="_blank">
+                <p style="display:inline;" class="text">Certificate</p>
+            </a>
+            <p style="margin-top: 5px" class="description_text">
+                Stemming from the principles of storytelling and design established in CalArts' renowned Animation
+                programs, this Specialization lays a primary foundation for experimentation and exploration of video
+                game design, story, character development, and winning gameplay before programming begins.
+            </p>
+        </div>
     </div>
-    <div style="padding-left: 10px" class="right">
-        <img src="Icons/information (2).svg" class="icons"/>
-        <p style="display:inline;" class="text">Specialization</p>
-        <br>
-        <img src="Icons/user-profile.svg" class="icons"/>
-        <p style="display:inline;" class="text">California Institute of the Arts</p>
-        <br>
-        <img src="Icons/calendar.svg" class="icons"/>
-        <p style="display:inline;" class="text">6 months - 2h/w</p>
-        <br>
-        <img src="Icons/document.svg" class="icons"/>
-        <a href="Picture/Arbeitszeugnis%20Everesto.pdf" target="_blank">
-            <p style="display:inline;" class="text">Certificate</p>
-        </a>
-        <p style="margin-top: 5px" class="description_text">
-            Stemming from the principles of storytelling and design established in CalArts' renowned Animation
-            programs, this Specialization lays a primary foundation for experimentation and exploration of video
-            game design, story, character development, and winning gameplay before programming begins.
-        </p>
+    <div class="skills">
+        <p style="text-decoration: underline" class="sub_headline">
+            Courses</p>
+        <ol class="first" style="margin-top: 5px">
+            <li>Introduction to Game Design</li>
+            <li>Story and Narrative Development for Video Games</li>
+            <li>World Design for Video Games</li>
+            <li>Character Design for Video Games</li>
+            <li>Game Design Document: Define the Art & Concepts</li>
+        </ol>
     </div>
+
 </div>
-<div class="skills">
-    <p style="text-decoration: underline" class="sub_headline">
-        Courses</p>
-    <ol class="first" style="margin-top: 5px">
-        <li>Introduction to Game Design</li>
-        <li>Story and Narrative Development for Video Games</li>
-        <li>World Design for Video Games</li>
-        <li>Character Design for Video Games</li>
-        <li>Game Design Document: Define the Art & Concepts</li>
-    </ol>
-</div>
-
-</div>-->
 
 <!---------------------------------------------------- Skills ----------------------------------------------------->
 
 <div class="all" id="skill_anchor">
     <div class="headline">Skills</div>
-    <div class="skills">
+    <div class="skill">
         <div class="wrapper2" style=" ">
             <div class="left2">
                 <p class="sub_headline">Programming Languages</p>
@@ -655,7 +637,7 @@
 <!---------------------------------------------------- About Me ----------------------------------------------------->
 <div class="all" id="about_anchor">
     <div class="headline responsive_text">About me</div>
-    <article>
+    <article class="aboutme">
         My name is Artjom Zakoyan, I am 20 years old and currently studying Informatic: Game Engineering
         (B.Sc.) in
         Munich.
@@ -709,7 +691,7 @@
 <!---------------------------------------------------- Contact ----------------------------------------------------->
 <div class="all" id="contact_anchor">
     <div class="headline">Contact</div>
-    <article>
+    <article class="text">
         You can contact me via E-Mail or LinkedIn.
     </article>
 </div>
