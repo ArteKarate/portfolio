@@ -4,6 +4,7 @@ html {
 
 }
 
+
 @media screen and (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -85,6 +86,14 @@ h3 span {
     padding-right: 10px;
 }
 
+.skillNames {
+    text-align: left;
+    font-weight: bold;
+    font-size: 40px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
 .description_text {
     text-align: left;
     font-weight: normal;
@@ -129,6 +138,13 @@ h3 span {
 ul {
     list-style-type: disc;
     margin: 5px;
+}
+
+.vertical {
+    border-left: 1px solid white;
+    height: 850px;
+    position: absolute;
+    left: 50%;
 }
 
 
@@ -333,7 +349,6 @@ a:hover {
 }
 
 
-
 .description_text {
     font-style: italic;
 }
@@ -405,11 +420,12 @@ a:hover {
         text-align: center;
     }
 
-    .skill{
-        margin-top: 0!important;
+    .skill {
+        margin-top: 0 !important;
         position: center;
 
     }
+
     .left2 {
         margin-right: 0;
         margin-left: 50px;
@@ -426,7 +442,7 @@ a:hover {
         height: auto;
     }
 
-    .skills{
+    .skills {
         margin: 350px 10px 0 0;
         padding-left: 30px;
         padding-right: 10px;
@@ -497,25 +513,23 @@ a:hover {
     }
 
     @media only screen and (max-width: 800px) {
-        h3,h3 span {
-            margin-left: 10px!important;
+        h3, h3 span {
+            margin-left: 10px !important;
             line-height: 60px !important;
         }
 
         .names {
             font-size: 25px;
-            line-height: 30px!important;
+            line-height: 30px !important;
         }
 
         .gif {
             width: 500px;
         }
+
         .responsive_text {
             margin: 0;
         }
-
-
-
 
 
         @media only screen and (max-width: 550px) {
