@@ -480,18 +480,18 @@ a:hover {
 
 @media screen and (max-width: 1024px) {
     .all {
-        width: 500px;
+        width: 500px !important;
     }
 
-    .all_UI{
-        width: 250px!important;
+    .all_UI {
+        width: 250px !important;
     }
 
-    .all_skills{
-        width: 700px;
+    .all_skills {
+        width: 700px !important;
     }
 
-    .bigIcons{
+    .bigIcons {
         height: 60px;
     }
 
@@ -506,23 +506,30 @@ a:hover {
     .h2 {
         font-size: 20px;
     }
-    .title{
-        font-size: 30px!important;
-    }
-    .small_text{
-        font-size: 12px;
-    }
 
-    .sub_headline{
-        font-size: 15px;
+
+    .small_text {
+        font-size: 12px;
     }
 
     .description_text {
         font-size: 15px;
     }
 
-    .links{
+    .links {
         font-size: 20px;
+    }
+
+    .text {
+        font-size: 20px;
+    }
+
+    .sub_headline {
+        font-size: 15px;
+    }
+
+    .icons {
+        width: 20px;
     }
 
     .skillbutton {
@@ -541,20 +548,23 @@ a:hover {
         background: none;
         cursor: default;
     }
-    .grid-container{
+
+    .grid-container {
         grid-template-columns: 1fr;
         text-align: center;
     }
-    .res_padding{
-        padding-top:0 !important;
+
+    .res_padding {
+        padding-top: 0 !important;
         margin-top: 75px;
     }
 
-    .res_padding2{
+    .res_padding2 {
         padding-top: 0 !important;
         margin-top: 40px;
     }
-    a{
+
+    a {
         font-size: 15px;
     }
 
@@ -562,14 +572,120 @@ a:hover {
         width: 500px;
     }
 
-    .pic{
+    .pic {
         width: 250px;
-        float: none!important;
-        padding-top: 0!important;
-        padding-right: 0!important;
+        float: none !important;
+        padding-top: 0 !important;
+        padding-right: 0 !important;
     }
 
-    .divider_padding{
+    .divider_padding {
         padding-top: 20px;
+    }
+
+    @media screen and (min-width: 768px) {
+        .all {
+            width: 500px !important;
+        }
+
+        .all_UI {
+            width: 400px !important;
+        }
+
+        .all_skills {
+            width: 700px !important;
+        }
+
+        .bigIcons {
+            height: 60px;
+        }
+
+        .headline {
+            font-size: 60px;
+        }
+
+        .h1 {
+            font-size: 30px;
+        }
+
+        .h2 {
+            font-size: 30px;
+        }
+
+
+        .small_text {
+            font-size: 12px;
+        }
+
+        .description_text {
+            font-size: 20px;
+        }
+
+        .links {
+            font-size: 20px;
+        }
+
+        .text {
+            font-size: 20px;
+        }
+
+        .sub_headline {
+            font-size: 20px;
+        }
+
+        .icons {
+            width: 20px;
+        }
+
+        .skillbutton {
+            display: inline;
+            width: 70px;
+            height: 20px;
+            float: left;
+            line-height: 20px;
+            font-size: 10px;
+            text-decoration: none;
+            color: white;
+            border-radius: 30px;
+            border: 2px solid cyan;
+            text-align: center;
+            padding: 0 10px;
+            background: none;
+            cursor: default;
+        }
+
+        .grid-container {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        .res_padding {
+            padding-top: 0 !important;
+            margin-top: 75px;
+        }
+
+        .res_padding2 {
+            padding-top: 0 !important;
+            margin-top: 40px;
+        }
+
+        a {
+            font-size: 18px;
+        }
+
+        .gif {
+            width: 500px;
+        }
+
+        .pic {
+            width: 250px;
+            float: none !important;
+            padding-top: 0 !important;
+            padding-right: 0 !important;
+        }
+
+        .divider_padding {
+            padding-top: 20px;
+        }
     }
 }
